@@ -4,6 +4,8 @@ import '../styles/bootstrap.min.css';
 import LinkList from './LinkList';
 import DataTab from './DataTab';
 import DateFilter from './DateFilter'
+import ExportData from './ExportData'
+
 
 class App extends Component {
   constructor(props) {
@@ -24,8 +26,10 @@ class App extends Component {
     return (
       <div className="container-fluid">
       	<DateFilter dateFilter={this.handleChange} value={this.state.value}/>
+        <ExportData value={this.state.value}/>
         <LinkList value={this.state.value}/>
       	<DataTab value={this.state.value}/>
+
       </div>
     );
   }
